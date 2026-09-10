@@ -1,5 +1,5 @@
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -19,7 +19,7 @@ if (existsSync(target)) {
   process.exit(1);
 }
 mkdirSync(dirname(target), { recursive: true });
-cpSync(source, target, { recursive: true, filter: path => !/(?:^|[/\\])(node_modules|dist|work|test-results|playwright-report|\.local)(?:[/\\]|$)/.test(path) });
+cpSync(source, target, { recursive: true, filter: path => !/(?:^|[/\\])(node_modules|dist|work|test-results|playwright-report|\.local)(?:[/\\]|$)/.test(relative(source, path)) });
 cpSync(join(root, 'LICENSE'), join(target, 'LICENSE'));
 writeFileSync(join(target, 'REMIX.md'), `# 我的改编\n\n起点：[${challenge}](https://github.com/molis-ai/midnight-foundry-remix/tree/main/challenges/${challenge})，v0.1。\n\n修改者：待填写\n\n我改了什么：待填写\n\n怎么验证：待填写\n\n试玩地址或录屏：待填写（localhost 不能发给别人玩）\n`);
 console.log(`已创建 remixes/${name}\n\n接下来：\ncd remixes/${name}\nnpm ci\nnpm run dev -- --port 4188\n\n打开 http://127.0.0.1:4188，先玩一遍，再改一处。`);
