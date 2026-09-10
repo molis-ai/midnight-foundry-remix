@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.local/
+.env
+.env.*
+!.env.example
+.DS_Store
+._*
+test-results/
+playwright-report/
+work/
+*.mp4
+*.webm
+*.mov

@@ -1,0 +1,55 @@
+name: 交出我的版本
+description: 改一句话也欢迎；可玩链接或录屏二选一。
+title: "[作品] "
+labels: [remix]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        来改一处，让它变成你的版本。不要求提 PR，也不要求先部署。
+        本表单内容公开，请勿填写私人联系方式。暂时只有想法，请改用「留一个灵感」。
+  - type: input
+    id: challenge
+    attributes:
+      label: 从哪件作品出发
+      value: 000 · 人类验证局 v0.1
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 我改了什么
+      description: 一两句话就好，写清想让谁在什么瞬间有不同感受。
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 我的公开源码
+      description: 贴你自己 Fork 的具体作品目录或提交链接，保留原来源和许可证。
+    validations:
+      required: true
+  - type: textarea
+    id: demo
+    attributes:
+      label: 可玩地址或演示录屏
+      description: 二选一即可；可粘贴链接或上传视频。localhost 只有你自己能访问。请注明尚未完成或已知问题。
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: 希望怎样署名
+      description: 昵称即可，也可以附希望展示的公开主页；不用提供真实姓名。
+    validations:
+      required: true
+  - type: dropdown
+    id: display
+    attributes:
+      label: 展示选择
+      description: 按所选范围展示；你的代码仍在你的仓库。
+      options:
+        - 同意在作品墙及午夜造物局栏目中署名展示简介、截图或演示片段，并附作品链接
+        - 仅保留公开投稿，不额外转载展示
+    validations:
+      required: true

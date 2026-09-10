@@ -1,0 +1,22 @@
+name: 留一个灵感
+description: 不用写代码，说说你想改的一处。
+title: "[灵感] "
+labels: [idea]
+body:
+  - type: markdown
+    attributes:
+      value: 这里的灵感会公开，其他人可以与你讨论。灵感不会被标成已完成作品，也不保证由栏目实现。
+  - type: input
+    id: challenge
+    attributes:
+      label: 哪件作品
+      value: 000 · 人类验证局
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 如果只改一处，我想……
+      description: 说说具体变化，或者你想让谁在哪一刻用它。
+    validations:
+      required: true

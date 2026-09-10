@@ -1,0 +1,54 @@
+{
+  "README.md": {
+    "archive_sha256": "aba5ea1c5c91cd7fad70545d377c4e8fd3f8f5a957c7fecc04e20957d1dca506",
+    "public_sha256": "a5d0d10351c3746488550a3c315d196f7481f4e26869c673a959f95ec31be853"
+  },
+  "index.html": {
+    "archive_sha256": "b4e261a248eedeef716b68321dc45f8e419547abfe6661987383aaa2d468347f",
+    "public_sha256": "b4e261a248eedeef716b68321dc45f8e419547abfe6661987383aaa2d468347f"
+  },
+  "package-lock.json": {
+    "archive_sha256": "fe1d4287c4dc64ff1caec6766005ea4ceb066604c212f0e63deffdaca8ed8078",
+    "public_sha256": "fe1d4287c4dc64ff1caec6766005ea4ceb066604c212f0e63deffdaca8ed8078"
+  },
+  "package.json": {
+    "archive_sha256": "89b0301be609c91dab0193b91c54fe0f28df28d09cab9cae86826bb7e3d04a39",
+    "public_sha256": "89b0301be609c91dab0193b91c54fe0f28df28d09cab9cae86826bb7e3d04a39"
+  },
+  "playwright.config.js": {
+    "archive_sha256": "2d0c109ab004eab2d25cb904c5adc035292f8a5a3a2ecb2cdab6b06f484f323a",
+    "public_sha256": "2d0c109ab004eab2d25cb904c5adc035292f8a5a3a2ecb2cdab6b06f484f323a"
+  },
+  "public/favicon.svg": {
+    "archive_sha256": "f1421069c3c124138af4078c97f12316acabdc98ecd7f3135914855cd7eb3627",
+    "public_sha256": "f1421069c3c124138af4078c97f12316acabdc98ecd7f3135914855cd7eb3627"
+  },
+  "src/art.js": {
+    "archive_sha256": "95af515427d5cc7aefbbda9ec40cc93b7e78f9dbdf5010edfe24e925ac91403b",
+    "public_sha256": "95af515427d5cc7aefbbda9ec40cc93b7e78f9dbdf5010edfe24e925ac91403b"
+  },
+  "src/logic.js": {
+    "archive_sha256": "da75f6e339daa0c807212127c76f3badf24c579ac59b665c48f09b626e056f02",
+    "public_sha256": "da75f6e339daa0c807212127c76f3badf24c579ac59b665c48f09b626e056f02"
+  },
+  "src/main.js": {
+    "archive_sha256": "221b68eb614219a4b10fc2e7207a2538b9306bc4585d7264e6d38008a35f218b",
+    "public_sha256": "221b68eb614219a4b10fc2e7207a2538b9306bc4585d7264e6d38008a35f218b"
+  },
+  "src/poster.js": {
+    "archive_sha256": "509d71bfbdb64b511722894c59b16263a5b5d39e7d725450218b27f8ddd96822",
+    "public_sha256": "509d71bfbdb64b511722894c59b16263a5b5d39e7d725450218b27f8ddd96822"
+  },
+  "src/style.css": {
+    "archive_sha256": "e8d93b7ec275fcdff510a14b44dd5586eefe218ba326cb2a74a49b3a1e492431",
+    "public_sha256": "e8d93b7ec275fcdff510a14b44dd5586eefe218ba326cb2a74a49b3a1e492431"
+  },
+  "tests/browser/journey.spec.js": {
+    "archive_sha256": "487a5cb8b726dc7d5f1d88eb79dc401977b10ca0fe3110ca9bfa3541c82beda4",
+    "public_sha256": "487a5cb8b726dc7d5f1d88eb79dc401977b10ca0fe3110ca9bfa3541c82beda4"
+  },
+  "tests/logic.test.js": {
+    "archive_sha256": "3a70f749f3cefbb17506e6ae56f665d2d31463ba82c3ecf3310378cb9d0bdbea",
+    "public_sha256": "3a70f749f3cefbb17506e6ae56f665d2d31463ba82c3ecf3310378cb9d0bdbea"
+  }
+}
