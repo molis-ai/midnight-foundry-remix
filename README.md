@@ -16,7 +16,7 @@
 
 | 我想做什么 | 从这里开始 |
 |---|---|
-| 先玩原版 | [本地运行指南](docs/开始改一处.md)；公开网页版仍在准备中 |
+| 先玩原版 | **[直接在线试玩](https://molis-ai.github.io/midnight-foundry-remix/000-human-verification-bureau/original/)** · [本地运行指南](docs/开始改一处.md) |
 | 让 AI 帮我改 | [复制这段提示词](prompts/帮我改一处.md) |
 | 交出我的版本 | [提交作品](https://github.com/molis-ai/midnight-foundry-remix/issues/new?template=remix.yml)（需登录 GitHub） |
 | 我只有一个点子 | [留一个灵感](https://github.com/molis-ai/midnight-foundry-remix/issues/new?template=idea.yml)；栏目帖子发布后也可以直接留言 |
@@ -46,7 +46,7 @@
 
 这里是公开共创入口，包含已开放的原版、指南和社区作品索引。栏目制作档案另行保存；未交付版本不会冒充成原版开放。
 
-目前开放人类验证局 v0.1 源码。公开试玩地址、栏目正式发布和首批社区投稿尚未完成；不会用示例作品冒充真实参与。
+目前开放人类验证局 v0.1 源码和[在线试玩](https://molis-ai.github.io/midnight-foundry-remix/000-human-verification-bureau/original/)。栏目尚未正式发布，也还没有首批社区投稿。
 
 ## 使用与贡献
 

@@ -6,7 +6,7 @@
 
 ## 先玩，再改一处
 
-1. **玩原版**：[本地运行](../../docs/开始改一处.md)。公开网页版尚未上线。
+1. **玩原版**：[直接在线试玩](https://molis-ai.github.io/midnight-foundry-remix/000-human-verification-bureau/original/) · [本地运行](../../docs/开始改一处.md)。无需登录，原版 v0.1。
 2. **开始改**：[AI 提示词](../../prompts/帮我改一处.md) · [直接看源码](original/)。
 3. **交出你的版本**：[作品投稿](https://github.com/molis-ai/midnight-foundry-remix/issues/new?template=remix.yml) · [只有灵感](https://github.com/molis-ai/midnight-foundry-remix/issues/new?template=idea.yml)。
 4. **看看其他方向**：[社区作品墙](../../showcase/README.md)。
