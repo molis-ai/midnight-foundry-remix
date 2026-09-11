@@ -1,0 +1,20 @@
+import { cpSync, mkdirSync, writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const original = resolve(root, 'challenges/000-human-verification-bureau/original');
+const repository = process.env.GITHUB_REPOSITORY || 'molis-ai/midnight-foundry-remix';
+const repoName = repository.split('/')[1];
+if (!/^[A-Za-z0-9_.-]+$/.test(repoName || '')) throw new Error('仓库名无效');
+const route = '000-human-verification-bureau/original/';
+const base = `/${repoName}/${route}`;
+execFileSync(process.execPath, [resolve(root, 'scripts/check-original.mjs')], { cwd: root, stdio: 'inherit' });
+execFileSync('npm', ['run', 'build', '--', '--base', base], { cwd: original, stdio: 'inherit' });
+const output = resolve(root, '_site');
+mkdirSync(resolve(output, route), { recursive: true });
+cpSync(resolve(original, 'dist'), resolve(output, route), { recursive: true });
+writeFileSync(resolve(output, '.nojekyll'), '');
+writeFileSync(resolve(output, 'index.html'), `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>午夜造物局 · 在线试玩</title><h1>午夜造物局</h1><p><a href="./${route}">开始试玩：人类验证局原版 v0.1</a></p><p><a href="https://github.com/${repository}">拿走源码，一起改一处</a></p></html>\n`);
+console.log(`试玩构建完成：${base}`);

@@ -1,0 +1,48 @@
+name: 发布原版试玩
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: challenges/000-human-verification-bureau/original/package-lock.json
+      - uses: actions/configure-pages@v5
+      - name: 核对冻结原版
+        run: node scripts/check-original.mjs
+      - name: 安装与验证
+        working-directory: challenges/000-human-verification-bureau/original
+        run: |
+          npm ci
+          npm test
+      - name: 生成试玩站点
+        run: node scripts/build-pages.mjs
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 发布
+        id: deployment
+        uses: actions/deploy-pages@v4
